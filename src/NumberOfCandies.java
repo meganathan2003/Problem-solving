@@ -14,14 +14,21 @@ public class NumberOfCandies {
 
 		for (int i = 0; i < candies.length; i++) {
 			int candy = candies[i] + extraCandies;
-			for (int j = 0; j < candies.length - 1; j++) {
-				if (candy >= candies[j + 1]) {
-					booleanList.add(true);
+			System.out.println(candy);
+			boolean check = false;
+			for (int j = 0; j < candies.length; j++) {
+				if (candies[j] <= candy) { // 13 <= 5
+					System.out.println(candies[j]);
+					check = true;
 				} else {
-					booleanList.add(false);
+					check = false;
 					break;
 				}
-
+			}
+			if (check == true) {
+				booleanList.add(check);
+			} else {
+				booleanList.add(false);
 			}
 		}
 		return booleanList;
@@ -29,8 +36,8 @@ public class NumberOfCandies {
 
 	public static void main(String[] args) {
 
-		int[] candies = { 2, 3, 5, 1, 3 };
-		int extraCandies = 3;
+		int[] candies = { 1, 3, 9 };
+		int extraCandies = 4;
 
 		NumberOfCandies numberOfCandies = new NumberOfCandies();
 		List<Boolean> res = numberOfCandies.kidsWithCandies(candies, extraCandies);
