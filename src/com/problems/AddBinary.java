@@ -1,3 +1,4 @@
+package com.problems;
 import java.math.BigInteger;
 
 public class AddBinary {

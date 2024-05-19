@@ -1,3 +1,4 @@
+package com.problems;
 
 /**
  * @param {*} sentences
