@@ -1,4 +1,4 @@
-package com.problems;
+package com.problems.easy;
 class insertPosition {
     public static int solution(int[] nums, int target) {
         if (nums.length == 0) {

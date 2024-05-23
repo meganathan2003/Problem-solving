@@ -1,4 +1,4 @@
-package com.problems;
+package com.problems.easy;
 /**
  * Below the code for find the two
  * string are equal or not

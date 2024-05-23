@@ -8,7 +8,7 @@
 Output: 1
  */
 
-package com.problems;
+package com.problems.easy;
 
 import java.util.ArrayList;
 import java.util.Arrays;

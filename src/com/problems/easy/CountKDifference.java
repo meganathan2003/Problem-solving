@@ -1,4 +1,4 @@
-package com.problems;
+package com.problems.easy;
 
 /**
  * Below the problems are find the count of pairs are there in array and return

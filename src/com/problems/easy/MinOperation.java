@@ -1,4 +1,4 @@
-package com.problems;
+package com.problems.easy;
 /**
  * Below the sum for find the
  * min operation in the array and

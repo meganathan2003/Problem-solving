@@ -1,4 +1,4 @@
-package com.problems;
+package com.problems.easy;
 
 /**
  * Below the code for shuffle the array and make it proper string and return

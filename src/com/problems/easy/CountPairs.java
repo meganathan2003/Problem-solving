@@ -1,4 +1,4 @@
-package com.problems;
+package com.problems.easy;
 import javax.swing.plaf.IconUIResource;
 import java.util.Arrays;
 import java.util.List;
