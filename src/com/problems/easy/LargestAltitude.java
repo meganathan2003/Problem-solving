@@ -18,7 +18,6 @@ public class LargestAltitude {
         }
         return maxAltitude;
     }
-    // TODO: Read and understand this sum clearly tomorrow
 
     public static void main(String[] args) {
         int[] gain = {-5, 1, 5, 0, -7};
