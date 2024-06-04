@@ -1,3 +1,4 @@
+package com.problems.easy;
 import java.util.Arrays;
 
 public class lengthOfLastWord {

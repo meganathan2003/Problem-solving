@@ -1,3 +1,4 @@
+package com.problems.easy;
 /**
  * Below the code for find the two
  * string are equal or not
@@ -26,6 +27,7 @@ class  Solution {
                 }
             }
         }
+        System.out.println(builder);
         return builder.toString();
     }
 }
