@@ -1,6 +1,7 @@
 package com.collections;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 /**
@@ -24,5 +25,18 @@ public class SetExample {
 
         set.forEach(System.out::println); // this is for lambda experssion
 
+        // Here also we can use Iterator
+        Iterator<String> itr = set.iterator();
+
+        while (itr.hasNext()) { // This condition check the like if
+            System.out.println(itr.next());
+        }
+
+
+        // Also set have own lamda method that is very useful and efficent
+        set.removeIf(str -> str.contains("dinesh")); // this condition check like if using lamda
+
+        System.out.println("-------------------");
+        System.out.println(set);
     }
 }
