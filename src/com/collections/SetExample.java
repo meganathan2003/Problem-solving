@@ -17,7 +17,12 @@ public class SetExample {
 
         // import the set
         Set<String> set = new HashSet<String>();
-        
+        // add the elements into the set
+        set.add("dinesh");
+        set.add("dinesh");
+        set.add("Meganathan");
+
+        set.forEach(System.out::println); // this is for lambda experssion
 
     }
 }
