@@ -1,5 +1,9 @@
 package com.collections;
 
+import java.util.LinkedList;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
 /**
  * PriorityQueue is also class that is defined in the
  * collection framework that gives us a way for processing
@@ -13,5 +17,35 @@ public class PriorityQueueExample {
 
     public static void main(String[] args) {
 
+        // Two way we can import the queue and queue is the interface we cannot create a obj
+        Queue<Integer> queue = new LinkedList<>();
+
+        queue.add(29);
+        queue.add(19);
+        queue.add(20);
+        queue.add(30);
+        queue.add(1);
+
+        // peek method return the head number does not remove
+        System.out.println("Head is " + queue.peek());
+        System.out.println("offer " + queue.offer(10));
+
+        System.out.println(queue);
+
+        /**
+         * IN queue,we have another part is priority queue,
+         * the main advantage is this will be sorted when we
+         * add the elements and it will very usefull to remove and
+         * insert the element.
+         */
+
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+
+        pq.add(20);
+        pq.add(10);
+        pq.add(50);
+        pq.add(1);
+        // What ever queue method have same priority queue there peek poll and element
+        System.out.println(pq);
     }
 }
