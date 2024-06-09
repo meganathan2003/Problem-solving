@@ -9,6 +9,9 @@ import java.util.Set;
  * implement the code set is very powerful
  * while manipulate the data it inherit the
  * abstract class and Set interface
+ * <p>
+ * Also, it does not allow the duplicate element in the
+ * Hash set
  *
  * @author Meganathan
  */
@@ -17,7 +20,7 @@ public class SetExample {
     public static void main(String[] args) {
 
         // import the set
-        Set<String> set = new HashSet<String>();
+        Set<String> set = new HashSet<>();
         // add the elements into the set
         set.add("dinesh");
         set.add("dinesh");

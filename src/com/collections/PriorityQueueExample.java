@@ -34,18 +34,18 @@ public class PriorityQueueExample {
 
         /**
          * IN queue,we have another part is priority queue,
-         * the main advantage is this will be sorted when we
-         * add the elements and it will very usefull to remove and
-         * insert the element.
+         * the main advantage when we
+         * add the elements and it will maintain insertion order very usefull to remove and
+         * insert the element. and it allows duplicate
          */
 
-        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
 
-        pq.add(20);
-        pq.add(10);
-        pq.add(50);
-        pq.add(1);
+        priorityQueue.add(10);
+        priorityQueue.add(5);
+        priorityQueue.add(2);
+        
         // What ever queue method have same priority queue there peek poll and element
-        System.out.println(pq);
+        System.out.println(priorityQueue);
     }
 }

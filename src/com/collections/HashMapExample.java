@@ -17,9 +17,15 @@ public class HashMapExample {
     public static void main(String[] args) {
 
         // create a map without Generic
-        Map map = new HashMap();
-        map.put(1, "dinesh"); // here map we can use put method for add the element
+        Map<Integer, String> map = new HashMap<>();
+        map.put(1, "dinesh");
+        map.put(2, "Geetha");
+        map.put(3, "Subha"); // here map we can use put method for add the element
 
+        // Now itreate a each element to see the key and value pair
+        for (Map.Entry m : map.entrySet()) {
+            System.out.println(m.getKey() + " " + m.getValue());
+        }
         System.out.println(map); // output is object {1= dinesh}
 
     }
