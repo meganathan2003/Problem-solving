@@ -23,7 +23,7 @@ public class TreeMapExample {
         treeMap.put(1, "Dinesh");
         treeMap.put(2, "Surya");
         treeMap.put(3, "Shyam");
-        treeMap.put(4, "Geetha");
+        treeMap.put(4, "DJ");
         treeMap.put(5, "Subha");
 
         // Tree map allow the duplicate value
