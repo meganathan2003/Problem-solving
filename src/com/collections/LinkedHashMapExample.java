@@ -25,6 +25,9 @@ public class LinkedHashMapExample {
         linkedHashMap.put(1, "apple");
         linkedHashMap.put(2, "apple");
         linkedHashMap.put(3, "banana");
+        linkedHashMap.put(4, "banana");
+        linkedHashMap.put(5, "banana");
+
 
         // Now call the sub interface Entry in map
         for (Map.Entry<Integer, String> entry : linkedHashMap.entrySet()) {
