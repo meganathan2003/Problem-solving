@@ -11,39 +11,42 @@ package com.problems.easy;
  */
 public class CountGoodTriplets {
 
-    public int countGoodTriplets(int[] arr, int a, int b, int c) {
-
+    public static int countGoodTriplets(int[] arr, int a, int b, int c) {
         int count = 0;
         int n = arr.length;
+        int iCount = 0, jCount = 0, kCount = 0;
 
-        // Below the loops for find the good Count
-        // TODO: Need to understand the code
-        for (int i = 0; i < n; i++) {
-            for (int j = i + 1; j < n; j++) {
-                for (int k = j + 1; k < n; k++) {
-                    if (Math.abs(arr[i] - arr[j]) <= a && // 3 - 0
-                            Math.abs(arr[j] - arr[k]) <= b && // 0 - 1
-                            Math.abs(arr[i] - arr[k]) <= c // 3 - 1
-                    ) {
-                        count++;
+        // below the loop for minus the number
+        for (int i = 0; i < n - 2; i++) { // it reduce the loops times
+            iCount++;
+            for (int j = i + 1; j < n - 1; j++) { // It omited the last one element
+                jCount++;
+                for (int k = j + 1; k < n; k++) { // it check all last elements
+                    kCount++;
+                    if (Math.abs(arr[i] - arr[j]) <= a &&
+                            Math.abs(arr[j] - arr[k]) <= b &&
+                            Math.abs(arr[i] - arr[k]) <= c) {
+                        {
+                            count++;
+                        }
                     }
                 }
             }
         }
+        System.out.println("i loop runs: " + iCount + " times");
+        System.out.println("j loop runs: " + jCount + " times");
+        System.out.println("k loop runs: " + kCount + " times");
         return count;
+
     }
 
     public static void main(String[] args) {
+        int[] arr = {3, 0, 1, 1, 9, 7};
+        int a = 7;
+        int b = 2;
+        int c = 3;
 
-        // Create a new Array
-        int[] arr = {1, 1, 2, 2, 3};
-        int a = 0;
-        int b = 0;
-        int c = 1;
-
-        // Create a new obj
-        CountGoodTriplets goodTriplets = new CountGoodTriplets();
-        System.out.println(goodTriplets.countGoodTriplets(arr, a, b, c));
-
+        System.out.println("Number of good triplets: " + countGoodTriplets(arr, a, b, c));  // Output: 4
     }
 }
+

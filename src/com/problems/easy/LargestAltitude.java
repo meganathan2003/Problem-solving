@@ -6,7 +6,7 @@ package com.problems.easy;
  * Input: gain = [-5,1,5,0,-7]
  * Output: 1
  */
-public class LargestAltitude {
+public class    LargestAltitude {
 
     public int largestAltitude(int[] gain) {
         int currentAltitude = 0;
