@@ -1,4 +1,5 @@
 package com.problems.easy;
+
 /**
  * Below the sum for find the
  * min operation in the array and
@@ -26,6 +27,6 @@ public class MinOperation {
         int[] arr = {2, 11, 10, 1, 3};
         int k = 10;
         MinOperation minOperation = new MinOperation();
-        System.out.println(minOperation.minOperations(arr,k));
+        System.out.println(minOperation.minOperations(arr, k));
     }
 }
