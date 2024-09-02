@@ -14,16 +14,11 @@ public class SingleNumber {
         if (nums.length == 0) {
             return 0;
         }
-        int soln = 0;
+        int result = 0;
         for (int i = 0; i < nums.length - 1; i++) {
-            int firstEle = nums[i];
-            int secEle = nums[i + 1];
-            if ((firstEle ^ secEle) == 1) {
-                soln = nums[i];
-                System.out.println(soln);
-            }
+            result ^= nums[i];
         }
-        return soln;
+        return result;
     }
 
     public static void main(String[] args) {
