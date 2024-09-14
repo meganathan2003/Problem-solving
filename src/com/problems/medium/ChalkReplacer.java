@@ -1,4 +1,4 @@
-package com.problems.easy;
+package com.problems.medium;
 
 /**
  * Here the problems is to sove that
@@ -18,13 +18,13 @@ public class ChalkReplacer {
     public static int chalkReplacer(int[] chalk, int k) {
         // Step 1: Calculate the total sum of chalk
         int totalSum = 0;
+        // to find the single round
         for (int amount : chalk) {
             totalSum += amount;
         }
         System.out.println(totalSum);
 
         k = k % totalSum;
-        
 
         int i = 0;
         while (k >= chalk[i]) {
