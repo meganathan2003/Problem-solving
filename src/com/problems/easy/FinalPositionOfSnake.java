@@ -25,11 +25,7 @@ public class FinalPositionOfSnake {
         int[][] snake = new int[n][n];
 
         // now add the row and colum 
-        for(int i = 0; i < snake.length; i++){
-            for(int j = 0; j < snake.length; j++){
-                snake[i][j] = snake[i++][j++];
-            }
-        }
+
 
         
     }

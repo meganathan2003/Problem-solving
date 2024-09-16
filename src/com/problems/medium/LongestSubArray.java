@@ -20,7 +20,7 @@ public class LongestSubArray {
     // Create a static method
     public static int longestSubArray(int[] arr) {
 
-        // Now we have to find the bigeset value in the array
+        // Now we have to find the biggest value in the array
         int maxValueInArr = 0;
         int maxLengthValue = 0;
 
