@@ -27,8 +27,6 @@ public class StringReverser {
 
     }
 
-
-    
     public static void main(String[] args) {
         // create a string
         String str = "hello";
