@@ -23,11 +23,10 @@ public class FinalPositionOfSnake {
 
         // Create a 2D snake arr
         int[][] snake = new int[n][n];
+        return 0;
 
-        // now add the row and colum 
+        // now add the row and colum
 
-
-        
     }
 
     public static void main(String[] args) {
