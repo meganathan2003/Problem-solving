@@ -29,7 +29,7 @@ public class LargestNumber {
             strNums[i] = String.valueOf(nums[i]);
         }
 
-        // now we have to sort the array lexigraphically
+        // now we have to sort the array lexicographically
         Arrays.sort(strNums, (a, b) -> (b + a).compareTo(a + b));
 
         if (strNums[0].equals("0")) {
