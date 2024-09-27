@@ -13,18 +13,22 @@ import java.util.*;
 public class FrequencySort {
 
     // create a static method
-    public int[] frequencySort(int[] nums) {
+    public static int[] frequencySort(int[] nums) {
         Map<Integer, Integer> map = new HashMap<>();
         // count frequency of each number
         Arrays.stream(nums).forEach(n -> map.put(n, map.getOrDefault(n, 0) + 1));
-        // custom sort
-        return Arrays.stream(nums).boxed()
-                .sorted((a,b) -> !Objects.equals(map.get(a), map.get(b)) ? map.get(a) - map.get(b) : b - a)
-                .mapToInt(n -> n)
-                .toArray();
+
+        // custom sort using strem
+        return Arrays.stream(nums).boxed().sorted((a, b) -> !Objects.equals(map.get(a), map.get(b)) ? map.get(a) - map.get(b) : b - a).
+                mapToInt(n -> n).toArray();
     }
 
     public static void main(String[] args) {
+
+        // create a new array
+        int[] nums = {1, 2, 2, 2, 2, 3, 3, 3};
+
+        System.out.println(Arrays.toString(frequencySort(nums)));
 
     }
 

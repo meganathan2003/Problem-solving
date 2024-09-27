@@ -7,11 +7,11 @@ import java.util.Arrays;
  * Given a list of non-negative integers nums,
  * arrange them such that they form
  * the largest number and return it.
- * 
+ * <p>
  * Since the result may be very large, so you
  * need to return a string instead of
  * an integer.
- * 
+ * <p>
  * Input: nums = [10,2]
  * Output: "210"
  */
@@ -46,7 +46,7 @@ public class LargestNumber {
 
     public static void main(String[] args) {
         // create a string
-        int[] nums = { 0, 1 };
+        int[] nums = {0, 1};
         System.out.println(largestNumber(nums));
     }
 
