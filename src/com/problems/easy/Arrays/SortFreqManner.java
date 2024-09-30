@@ -10,11 +10,11 @@ public class SortFreqManner {
 
         HashMap<Integer, Integer> frequencyMap = new HashMap<>();
         StringBuilder builder = new StringBuilder();
-
-
+        
         for (int j : arr) {
             frequencyMap.put(j, frequencyMap.getOrDefault(j, 0) + 1);
         }
+
 
         // add to element in string builder
         Arrays.sort(arr, (a, b) -> {
@@ -23,6 +23,8 @@ public class SortFreqManner {
             System.out.println("Arr" + b);
             int freqA = frequencyMap.get(a); // Frequency of element a
             int freqB = frequencyMap.get(b); // Frequency of element b
+            
+            
 
             System.out.println("Freq" + freqA);
             System.out.println("Freq" + freqB);
@@ -31,6 +33,8 @@ public class SortFreqManner {
                 // If frequencies are equal, compare the values directly (for ascending order)
                 return a - b;
             }
+            
+            
             // Otherwise, compare based on frequency (for ascending frequency)
             return freqA - freqB;
         });
