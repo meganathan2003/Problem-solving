@@ -21,7 +21,7 @@ public class SortPeople {
         int k = 0;
         Map<Integer, String> map = new HashMap<>();
         for (int i = 0; i < names.length; i++) {
-            map.put(heights[i], names[i]); // it store the key and value
+            map.put(heights[i], names[i]); // it stores the key and value
         }
         System.out.println(map);
         Arrays.sort(heights);

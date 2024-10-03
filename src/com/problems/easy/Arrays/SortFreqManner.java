@@ -1,63 +1,45 @@
 package com.problems.easy.Arrays;
 
-import java.util.Arrays;
-import java.util.HashMap;
+import java.util.*;
 
-/**
- * Here the problems is to solve that
- * you are given the array you need
- * sort that based one frequency if
- * both number are same frequency sort
- * that increasing order
- *
- * @author meganathan
- */
 public class SortFreqManner {
 
-    // create a separate method
-    public static void sortFreqManner(Integer[] arr) {
+    public static void main(String[] args) {
+        // Scanner to take input
+        Scanner sc = new Scanner(System.in);
 
+        // Reading the input size
+        int n = sc.nextInt();
+
+        // Reading the array elements
+        Integer[] arr = new Integer[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        // Create a frequency map
         HashMap<Integer, Integer> frequencyMap = new HashMap<>();
-        StringBuilder builder = new StringBuilder();
-
         for (int j : arr) {
             frequencyMap.put(j, frequencyMap.getOrDefault(j, 0) + 1);
         }
 
-
-        // add to element in string builder
+        // Sort the array by frequency and value
         Arrays.sort(arr, (a, b) -> {
-
-            System.out.println("Arr" + a);
-            System.out.println("Arr" + b);
             int freqA = frequencyMap.get(a); // Frequency of element a
             int freqB = frequencyMap.get(b); // Frequency of element b
 
-
-            System.out.println("Freq" + freqA);
-            System.out.println("Freq" + freqB);
-            // Compare based on frequency
-            if (freqA == freqB) {
-                // If frequencies are equal, compare the values directly (for ascending order)
-                return a - b;
+            // Compare based on frequency first
+            if (freqA != freqB) {
+                return freqA - freqB; // Sort by frequency (ascending)
             }
-
-
-            // Otherwise, compare based on frequency (for ascending frequency)
-            return freqA - freqB;
+            // If frequencies are equal, sort by value (ascending)
+            return a - b;
         });
-
-        System.out.println(Arrays.toString(arr));
-
-    }
-
-
-    public static void main(String[] args) {
-        // create a new array]\
-
-        Integer[] arr = {1, 1, 3, 2};
-        sortFreqManner(arr);
-
-
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i]);
+            if (i < n - 1) {
+                System.out.print(" "); // Add space between numbers
+            }
+        }
     }
 }

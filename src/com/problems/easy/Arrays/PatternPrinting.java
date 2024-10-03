@@ -4,12 +4,13 @@ package com.problems.easy.Arrays;
  * Print the pattern below using any loop. The number of rows should be obtained
  * from the user while running the program. The below is an example for user
  * input of 5.
- * 
- * 
+ * <p>
+ * <p>
  * *
  * * *
  * * * *
  * * * * *
+ * </p>
  */
 public class PatternPrinting {
 
@@ -22,14 +23,12 @@ public class PatternPrinting {
     // }
 
     public static void main(String[] args) {
+        String start = "";
         for (int i = 1; i <= 5; i++) {
-            // String star = "";
-            for (int j = 1; j <= i; j++) {
-                System.out.print("*");
-            }
-            System.out.println();
-            // System.out.println(star);
+            start += "*";
+            System.out.println(start);
         }
+
 
     }
 
