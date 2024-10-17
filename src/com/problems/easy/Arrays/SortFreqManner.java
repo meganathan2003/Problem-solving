@@ -5,40 +5,38 @@ import java.util.*;
 public class SortFreqManner {
 
     public static void main(String[] args) {
-        // Scanner to take input
-        Scanner sc = new Scanner(System.in);
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        Integer[] arr = new Integer[n];  // Use Integer[] instead of int[]
 
-        // Reading the input size
-        int n = sc.nextInt();
-
-        // Reading the array elements
-        Integer[] arr = new Integer[n];
+        // Reading input array
         for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
+            arr[i] = obj.nextInt();
         }
 
-        // Create a frequency map
-        HashMap<Integer, Integer> frequencyMap = new HashMap<>();
-        for (int j : arr) {
-            frequencyMap.put(j, frequencyMap.getOrDefault(j, 0) + 1);
+        Map<Integer, Integer> freqMap = new HashMap<>();
+        for (int num : arr) {
+            freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
         }
 
-        // Sort the array by frequency and value
+        // Step 2: Sort the array by frequency, and by value if frequency is the same
         Arrays.sort(arr, (a, b) -> {
-            int freqA = frequencyMap.get(a); // Frequency of element a
-            int freqB = frequencyMap.get(b); // Frequency of element b
+            int freqA = freqMap.get(a);
+            System.out.println("Freq A " + freqA);
+            int freqB = freqMap.get(b);
 
-            // Compare based on frequency first
             if (freqA != freqB) {
-                return freqA - freqB; // Sort by frequency (ascending)
+                return Integer.compare(freqA, freqB); // Sort by frequency
+            } else {
+                return Integer.compare(a, b); // If frequencies are the same, sort by value
             }
-            // If frequencies are equal, sort by value (ascending)
-            return a - b;
         });
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr[i]);
-            if (i < n - 1) {
-                System.out.print(" "); // Add space between numbers
+
+        Set<Integer> printed = new HashSet<>();
+        for (int num : arr) {
+            if (!printed.contains(num)) {
+                System.out.print(num + " ");
+                printed.add(num);
             }
         }
     }
