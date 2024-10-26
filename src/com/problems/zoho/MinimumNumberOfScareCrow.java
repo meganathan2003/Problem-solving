@@ -1,5 +1,7 @@
 package com.problems.zoho;
 
+import java.math.BigInteger;
+
 /**
  * Day 25
  *
@@ -31,6 +33,7 @@ public class MinimumNumberOfScareCrow {
             } else {
                 i++;
             }
+
         }
 
         return scarecrows;
