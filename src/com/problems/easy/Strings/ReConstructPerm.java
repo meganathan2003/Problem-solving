@@ -29,6 +29,7 @@ public class ReConstructPerm {
 
     }
 
+
     public static void main(String[] args) {
         String s = "IDID";
         int[] result = diStringMatch(s);
