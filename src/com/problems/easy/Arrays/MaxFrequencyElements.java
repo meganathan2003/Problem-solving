@@ -12,11 +12,27 @@ public class MaxFrequencyElements {
 
         int freqCount = 0;
 
-        HashMap<Integer, Integer> countNum = new HashMap<>();
+        HashMap<Integer, Integer> frequencyMap = new HashMap<>();
 
-        for (int i = 0; i < nums.length; i++) {
-
+        for (int num : nums) {
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
         }
+
+        // find the max freq
+        int maxFreq = 0;
+        for (int frequency : frequencyMap.values()) {
+            maxFreq = Math.max(frequency, maxFreq);
+        }
+
+
+        // find the key and value how many times its return
+        int totalCount = 0;
+        for (int num : frequencyMap.values()) {
+            if (num == maxFreq) {
+                totalCount += maxFreq;
+            }
+        }
+        return totalCount;
 
     }
 
