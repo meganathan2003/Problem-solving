@@ -1,5 +1,13 @@
 package com.problems.easy.Arrays;
 
+/*
+  Find the unique element in the
+  array and the sum it and return
+  <p>
+  @author Meganathan
+  </p>
+ */
+
 import java.util.HashMap;
 import java.util.Map;
 
