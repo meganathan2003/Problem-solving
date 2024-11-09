@@ -1,5 +1,13 @@
 package com.problems.easy.Arrays;
 
+/**
+ * Here the problems is find the
+ * who are all unable to eat the
+ * sandwich in candeen and return
+ * the student count
+ *
+ * @author Meganathan
+ */
 public class NoOfStudentsUnableEat {
 
     public static int countStudents(int[] students, int[] sandwiches) {
