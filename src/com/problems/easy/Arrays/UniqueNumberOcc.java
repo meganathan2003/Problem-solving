@@ -21,7 +21,6 @@ public class UniqueNumberOcc {
         }
 
         HashSet<Integer> occurrenceSet = new HashSet<>(countMap.values());
-     
 
         return occurrenceSet.size() == countMap.size();
     }
