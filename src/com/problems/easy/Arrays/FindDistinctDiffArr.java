@@ -11,21 +11,30 @@ public class FindDistinctDiffArr {
             return new int[0];
         }
 
-        Set<Integer> diff = new HashSet<>();
-        int[] res = new int[nums.length];
+        int n = nums.length;
 
-        int count = 0;
-        for (int i = 0; i < nums.length; i++) {
-            diff.add(nums[i]);
-            for (int j = i; j < nums.length - 2; j++) {
+        int[] res = new int[n];
 
-                count++;
+        Set<Integer> prefixSet = new HashSet<>();
+        Set<Integer> suffixSet = new HashSet<>();
 
-            }
-            res[i] = diff.size() - count;
-            count = 0;
+        int[] suffixDistinctCount = new int[n + 1];
+
+        for (int i = n - 1; i >= 0; i--) {
+            suffixSet.add(nums[i]);
+            suffixDistinctCount[i] = suffixSet.size();
         }
 
+        // this loop for calculate the result of each index
+
+        for (int i = 0; i < n; i++) {
+            prefixSet.add(nums[i]);
+            int prefixCount = prefixSet.size();
+            int suffixCount = suffixDistinctCount[i + 1];
+            res[i] = prefixCount - suffixCount;
+        }
+
+        
         return res;
 
     }
