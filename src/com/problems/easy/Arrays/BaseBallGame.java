@@ -17,17 +17,16 @@ public class BaseBallGame {
 
         for (String operation : operations) {
             if (operation.equals("C")) {
-                // Remove the last valid score
+
                 if (!record.isEmpty()) {
                     record.remove(record.size() - 1);
                 }
             } else if (operation.equals("D")) {
-                // Double the last valid score
+
                 if (!record.isEmpty()) {
                     record.add(2 * record.get(record.size() - 1));
                 }
             } else if (operation.equals("+")) {
-                // Add the last two valid scores
                 if (record.size() >= 2) {
                     record.add(record.get(record.size() - 1) + record.get(record.size() - 2));
                 }
@@ -35,8 +34,6 @@ public class BaseBallGame {
                 record.add(Integer.parseInt(operation));
             }
         }
-
-        System.out.println(record);
 
         int score = 0;
         // here the record list we have to add
