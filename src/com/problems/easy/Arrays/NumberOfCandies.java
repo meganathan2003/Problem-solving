@@ -15,10 +15,9 @@ public class NumberOfCandies {
 
 		for (int i = 0; i < candies.length; i++) {
 			int candy = candies[i] + extraCandies;
-			System.out.println(candy);
 			boolean check = false;
 			for (int j = 0; j < candies.length; j++) {
-				if (candies[j] <= candy) { // 13 <= 5
+				if (candies[j] <= candy) { // 2 <= 6
 					System.out.println(candies[j]);
 					check = true;
 				} else {
