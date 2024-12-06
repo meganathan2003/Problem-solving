@@ -21,9 +21,13 @@ public class SortArrayByParity {
                 int temp = nums[left];
                 nums[left] = nums[right];
                 nums[right] = temp;
+                left++;
+                right--;
+            } else if (nums[left] % 2 == 0) {
+                left++;
+            } else if (nums[right] % 2 == 1) {
+                right--;
             }
-            left++;
-            right--;
         }
 
         return nums;
