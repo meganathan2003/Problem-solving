@@ -16,11 +16,11 @@ public class NRepeatedElements {
         Set<Integer> set = new HashSet<>();
 
 
-        for (int i = 0; i < nums.length; i++) {
-            if (set.contains(nums[i])) {
-                return nums[i];
+        for (int num : nums) {
+            if (set.contains(num)) {
+                return num;
             }
-            set.add(nums[i]);
+            set.add(num);
         }
 
         return -1;
