@@ -18,6 +18,7 @@ public class FindMissingAndRepeatedValues {
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
+
                 if (set.contains(grid[i][j])) {
                     res[0] = grid[i][j];
                 } else {
