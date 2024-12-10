@@ -6,6 +6,7 @@ public class SmallEvenMultiple {
     public static int smallestEvenMultiple(int n) {
 
         if (n % 2 == 0) {
+
             return n; // n is already a multiple of 2
         } else {
             return n * 2;
