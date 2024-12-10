@@ -1,6 +1,4 @@
 package com.problems.leetcode;
-
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class FindNUniqueIntegers {
@@ -19,7 +17,6 @@ public class FindNUniqueIntegers {
             result[index++] = i;
             result[index++] = -i;
         }
-
 
         // check if n is odd then add 0
         if (n % 2 == 1) {
