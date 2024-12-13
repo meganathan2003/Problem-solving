@@ -22,7 +22,7 @@ public class DivSumDiff {
             }
         }
 
-        return Math.abs(num1)  - Math.abs(num2);
+        return Math.abs(num1) - Math.abs(num2);
 
     }
 
