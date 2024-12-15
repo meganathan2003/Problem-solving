@@ -7,7 +7,7 @@ public class SubProductSumDigit {
 
 //        validation
         if (n < 0) {
-            return 0;
+            throw new IllegalArgumentException("Integer must be non-negative Integer");
         }
 
         int product = 1; // Start product as 1
