@@ -14,37 +14,47 @@ public class RelativeSortArray {
     //    Create a static method
     public static int[] relativeSortArray(int[] arr1, int[] arr2) {
         // Validation
-        if (arr1.length == 0 || arr2.length == 0) {
-            return new int[0];
-        }
-
-        // Step 1: Create a list to store the elements in arr1
-        List<Integer> arr = new ArrayList<>();
+        // Create a frequency map to count occurrences of elements in arr1
+        Map<Integer, Integer> freqMap = new HashMap<>();
         for (int num : arr1) {
-            arr.add(num);
+            freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
         }
 
+        // Create a result list to store sorted elements
+        List<Integer> result = new ArrayList<>();
 
-        Set<Integer> arr2Set = new HashSet<>();
+        // Add elements of arr2 in the same order, using the frequency map
         for (int num : arr2) {
-            arr2Set.add(num);
+            if (freqMap.containsKey(num)) {
+                int count = freqMap.get(num);
+                for (int i = 0; i < count; i++) {
+                    result.add(num);
+                }
+                freqMap.remove(num); // Remove from map after processing
+            }
         }
 
-        List<Integer> distinctEle = new ArrayList<>();
-
+        // Process remaining elements not in arr2
         List<Integer> remaining = new ArrayList<>();
-        for (int num : arr) {
-            if (arr2Set.contains(num)) {
-                distinctEle.add(num);
-            } else {
+        for (Map.Entry<Integer, Integer> entry : freqMap.entrySet()) {
+            int num = entry.getKey();
+            int count = entry.getValue();
+            for (int i = 0; i < count; i++) {
                 remaining.add(num);
             }
         }
 
+        // Sort remaining elements in ascending order and add to result
         Collections.sort(remaining);
-        distinctEle.addAll(remaining);
+        result.addAll(remaining);
 
-        return distinctEle.stream().mapToInt(Integer::intValue).toArray();
+        // Convert result list back to array
+        int[] sortedArray = new int[result.size()];
+        for (int i = 0; i < result.size(); i++) {
+            sortedArray[i] = result.get(i);
+        }
+
+        return sortedArray;
     }
 
 }
