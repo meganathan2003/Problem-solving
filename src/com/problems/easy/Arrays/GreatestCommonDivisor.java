@@ -10,7 +10,7 @@ public class GreatestCommonDivisor {
             return 0;
         }
 
-        Arrays.sort(nums);
+        Arrays.sort(nums); // 6 , 7 ,9
 
         int smallNum = nums[0];
         int largeNum = nums[nums.length - 1];
@@ -21,7 +21,7 @@ public class GreatestCommonDivisor {
     private static int gcd(int a, int b) {
         while (b != 0) {
 
-            int remainder = a % b;
+            int remainder = a % b ;
             a = b;
             b = remainder;
         }
@@ -30,7 +30,7 @@ public class GreatestCommonDivisor {
 
     public static void main(String[] args) {
 
-        int[] nums = {6, 7, 9};
+        int[] nums = {3, 6};
         System.out.println(findGCD(nums));
 
     }
