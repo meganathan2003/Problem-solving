@@ -15,7 +15,7 @@ public class XPattern {
                 else
                     System.out.print(".");
             }
-            System.out.println("");
+            System.out.println(" ");
         }
     }
 }
