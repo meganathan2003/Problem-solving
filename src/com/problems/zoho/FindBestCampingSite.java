@@ -8,8 +8,8 @@ package com.problems.zoho;
 class FindBestCampingSite {
 
     // Directions for adjacent cells: right, down, left, up
-    private static final int[] ROW_DIR = {0, 1, 0, -1};
-    private static final int[] COL_DIR = {1, 0, -1, 0};
+    private static final int[] ROW_DIR = {-1, 1, 0, 0};
+    private static final int[] COL_DIR = {0, 0, -1, 1};
 
     public static int[] findBestCampingSite(char[][] mapGrid) {
         int rows = mapGrid.length;

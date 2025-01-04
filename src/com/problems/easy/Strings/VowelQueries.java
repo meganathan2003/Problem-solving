@@ -16,7 +16,6 @@ public class VowelQueries {
             prefix[i] = (i > 0 ? prefix[i - 1] : 0) + (startsWithVowel && endsWithVowel ? 1 : 0);
         }
 
-        // Answer each query
         int[] ans = new int[queries.length];
         for (int i = 0; i < queries.length; i++) {
             int li = queries[i][0];
